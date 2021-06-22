@@ -1,0 +1,232 @@
+
+/*====================== YOUTUBE BACKGROUND ============================*/
+.divi_se_youtubebg,  .divi_se_youtubebg_parent{
+  position: relative;
+  overflow: hidden;
+}
+
+.divi_se_youtube_black {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  top: 0;
+  overflow: hidden;
+  left: 0;
+}
+
+.mig-youtube-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+}
+
+.mig-youtube-outer-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.mig-youtube-wrapper {
+  position: relative;
+  top: 0;
+  height: 100%;
+}
+
+
+.mig-youtube-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+}
+
+.mig-youtube-customoverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+
+
+
+/*====================== VIMEO BACKGROUND ==========================*/
+.mig-vimeo-outer-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.mig-vimeo-wrapper {
+  position: relative;
+  top: 0;
+  height: 100%;
+}
+
+
+.mig-vimeo-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+}
+
+
+.mig-vimeo-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+}
+
+
+
+/*=============== PARTICLES BACKGROUND ====================*/
+/***************************************************/
+.divi_se_particles_bg, .divi_se_particles_bg_parent {
+    position: relative;
+    overflow-y: hidden;
+}
+
+.divi_se_particles_bg canvas, .divi_se_particles_bg_parent canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+.divi_se_youtube_background_container{
+ position: absolute;
+ background: transparent;
+ width: 100%;
+ z-index: 0;
+ top: 0;
+ height: 100%;
+ overflow: hidden;
+ left: 0;
+}
+
+
+
+
+.divi_se_youtube_background_overlay {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.divi_se_youtubebg .ytplayer-container, .divi_se_youtubebg_parent .ytplayer-container{
+ position: absolute;
+ top: 0;
+ z-index: -1;
+}
+
+
+/************* TILT EFFECT **************/
+.divi_se_tilteffect, .divi_se_tilteffect_parent{
+  overflow: hidden;
+}
+
+.divi_se_tilt_parallax {
+  transform-style: preserve-3d;
+}
+
+.divi_se_tilt_parallax .et_pb_module {
+  transform: translateZ(20px);
+}
+
+.dse_overflow {
+  overflow-x: hidden !important;
+}
+
+/*=============== OFF CANVAS PLUGIN ================*/
+.miguras_offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999 !important;
+  width: 0;
+  overflow: hidden;
+  padding: 32px 16px 32px 32px !important;
+}
+
+.miguras_offcanvas .et_pb_row, .miguras_offcanvas .et_pb_column {
+  width: 100% !important;
+  max-width: 100%;
+  display: block;
+}
+
+.miguras_offcanvas_button_wrapper {
+  position: fixed;
+  z-index: 99999998;
+  display: block;
+
+}
+
+.miguras_offcanvas_button {
+  cursor: pointer;
+}
+
+.miguras_offcanvas_button {
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+
+
+.dse_inside_top, .dse_inside_middle, .dse_inside_bottom {
+  z-index: 99999999;
+  opacity: 0.6;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.dse_inside_top:hover, .dse_inside_middle:hover, .dse_inside_bottom:hover {
+  opacity: 1;
+}
+
+.miguras_offcanvas_button_wrapper span{
+  display: block;
+  float: left;
+}
+
+.miguras_offcanvas_button_text {
+    padding: 0 0.2em;
+    cursor: pointer;
+}
