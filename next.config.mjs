@@ -11,7 +11,6 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  basePath: '/shri-portfolio',
 };
 
 export default nextConfig;
