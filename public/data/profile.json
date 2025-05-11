@@ -3,7 +3,7 @@
   "title": "RTL Design Engineer",
   "profileImage": "/me.jpg?height=320&width=320",
   "bio": [
-    "My core expertise lies in machine learning hardware accelerators, domain-specific architectures (CORDIC, FFT, algorithm-specific), and advanced computer architecture.",
+    "My core expertise lies in machine learning hardware accelerators, domain-specific architectures and low-power design.",
     "My research is focused on workload-based power-energy optimization for efficient computing systems.",
     "I have practical exposure to the complete RTL-to-GDS flow using commercial EDA tools, FPGA emulation, and post-silicon validation, demonstrated through my Compute-Near-Memory test-chip taped out at TSMC-65nm.",
     "I actively contribute to emerging high-level HDLs such as TL-Verilog. Recently, I have begun experimenting with agentic interfaces (MCP + EDA tools) aimed at automating RTL generation, verification, and chip design workflows.",
