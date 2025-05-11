@@ -76,7 +76,7 @@
       "description": "Built RISC-V co-processor interconnect fabric from scratch and worked on SoC generation frameworks.",
       "responsibilities": [
         "Architected and developed custom Co-processor interconnects for RISC-V Processors",
-        "Updated SoC generation frameworks with interconnect generation support",
+        "Updated SoC generation frameworks with interconnect generation support"
       ],
       "technologies": ["RISC-V", "BlueSpec SystemVerilog", "Architecture", "Interconnects"]
     },
