@@ -1,0 +1,47 @@
+{
+  "education": [
+    {
+      "degree": "PhD - Electrical and Computer Engineering",
+      "institution": "The University of Texas at Austin",
+      "location": "Texas, USA",
+      "period": "August 2022 - Present (part-time)",
+      "description": "Focusing on advanced computer architecture and hardware design for machine learning applications.",
+      "courses": [],
+      "achievements": []
+    },
+    {
+      "degree": "MS - Electrical and Computer Engineering",
+      "institution": "The University of Texas at Austin",
+      "location": "Texas, USA",
+      "period": "August 2022 - May 2024",
+      "description": "GPA: 3.9/4.0, Concentration: Architecture, Computer Systems, and Embedded Systems",
+      "courses": [
+        "Computer Architecture",
+        "SoC Design",
+        "ASIC Design Lab",
+        "Verification of Digital Systems",
+        "High Speed Computer Arithmetic",
+        "Hardware Architectures for Machine Learning",
+        "Embedded IoT"
+      ],
+      "achievements": []
+    },
+    {
+      "degree": "B.E. - Electronics and Communication Engineering",
+      "institution": "PSG College of Technology",
+      "location": "Coimbatore, India",
+      "period": "August 2018 - May 2022",
+      "description": "GPA: 9.92/10, Summa Cum Laude, Class of 2022",
+      "courses": [
+        "Computer Organization",
+        "Digital Design",
+        "VLSI Design",
+        "Embedded Systems",
+        "Digital Signal Processing",
+        "Advanced Physical Design using 130nm PDK (VSD)",
+        "Building a RISC-V CPU (Linux Foundation)"
+      ],
+      "achievements": ["Best Outgoing Student", "Best Bachelor Thesis"]
+    }
+  ]
+}

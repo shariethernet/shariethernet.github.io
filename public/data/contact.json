@@ -1,0 +1,16 @@
+{
+  "email": "shariethernet@gmail.com",
+  "contactText": "I'm always open to discussing new projects, research opportunities, or challenges in silicon design and hardware acceleration. Feel free to reach out to me using the form or through my social media profiles.",
+  "social": [
+    {
+      "platform": "linkedin",
+      "url": "https://linkedin.com/in/shariethernet",
+      "username": "shariethernet"
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/shariethernet",
+      "username": "shariethernet"
+    }
+  ]
+}

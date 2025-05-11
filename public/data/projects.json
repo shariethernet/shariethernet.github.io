@@ -1,0 +1,110 @@
+{
+  "projects": [
+    {
+      "title": "Darknet Accelerator",
+      "category": "hardware",
+      "description": "Zynq MPSOC Based System Design for accelerating the Darknet neural network framework.",
+      "image": "/placeholder.svg?height=200&width=400",
+      "technologies": ["Zynq MPSOC", "QEMU-SystemC", "TLM", "Linux Kernel", "GEMM Accelerator", "Xilinx DPU"],
+      "features": [
+        "Converted Darknet from fp32 to int16",
+        "Implemented multi-threading",
+        "Developed QEMU-SystemC TLM-based Virtual Platform Prototyping of CPU+Accelerator system",
+        "Developed Linux Kernel Modules and Hardware Abstraction Layers for HW/SW integration",
+        "Accelerated Darknet using a custom GEMM accelerator and Xilinx DPU",
+        "Deployed yolov3-tiny network on Ultra96 FPGA"
+      ],
+      "github": "https://github.com/shariethernet",
+      "liveDemo": ""
+    },
+    {
+      "title": "Compute Near Memory Test Chip",
+      "category": "hardware",
+      "description": "TSMC 65nm Tapeout (RTL to GDS and Post-Silicon Testing) of a Compute Near Memory architecture.",
+      "image": "/placeholder.svg?height=200&width=400",
+      "technologies": ["TSMC 65nm", "RTL to GDS", "Post-Silicon Testing", "FPGA Emulation"],
+      "features": [
+        "Architected, designed, verified, and implemented a Compute Near Memory Test Chip",
+        "Targeted convolutions, arithmetic, and logical operations",
+        "Developed FPGA-based emulation platform",
+        "Created post-silicon test infrastructure",
+        "Achieved successful post-silicon bring-up"
+      ],
+      "github": "https://github.com/shariethernet",
+      "liveDemo": ""
+    },
+    {
+      "title": "LogicNets+",
+      "category": "hardware",
+      "description": "A Framework for Low Latency Binary Neural Network Inference on FPGAs, extending Xilinx Research's LogicNets.",
+      "image": "/placeholder.svg?height=200&width=400",
+      "technologies": ["FPGA", "Binary Neural Networks", "Hardware Acceleration", "Xilinx"],
+      "features": [
+        "Exploited neuron-to-truth-table equivalence for fully connected and convolutional layers",
+        "Achieved 90% accuracy and <20ns inference latency at 200 MHz",
+        "Extended Xilinx Research's LogicNets to support Convolution Layers"
+      ],
+      "github": "https://github.com/shariethernet",
+      "liveDemo": ""
+    },
+    {
+      "title": "Hardware Accelerator Extension Interface",
+      "category": "hardware",
+      "description": "Co-processor agnostic accelerator adapter for RISC-V CPUs based on OpenHW Group's Core-V Extension Interface Specifications.",
+      "image": "/placeholder.svg?height=200&width=400",
+      "technologies": ["RISC-V", "Hardware Acceleration", "OpenHW Group", "Core-V"],
+      "features": [
+        "Designed a co-processor agnostic accelerator adapter",
+        "Based on OpenHW Group's Core-V Extension Interface Specifications",
+        "Enabled seamless integration of custom accelerators with RISC-V cores"
+      ],
+      "github": "https://github.com/shariethernet",
+      "liveDemo": ""
+    },
+    {
+      "title": "RPHAX",
+      "category": "hardware",
+      "description": "Rapid Prototyping of Hardware Accelerators on Xilinx FPGAs with automated IP packaging and integration.",
+      "image": "/placeholder.svg?height=200&width=400",
+      "technologies": ["Xilinx FPGA", "AXI4-Lite", "AXI Stream", "Zynq", "IP Packaging"],
+      "features": [
+        "Developed automation frameworks for IP Packaging (AXI4-Lite, AXI Stream)",
+        "Automated Block Design and bitstream generation",
+        "Targeted Zynq-based prototyping",
+        "Streamlined hardware accelerator development workflow"
+      ],
+      "github": "https://github.com/shariethernet",
+      "liveDemo": ""
+    },
+    {
+      "title": "Transaction Level RISC-V CPU Core",
+      "category": "hardware",
+      "description": "Multi-stage RISC-V RV32IC CPU Core design and physical implementation on 130nm PDK.",
+      "image": "/placeholder.svg?height=200&width=400",
+      "technologies": ["RISC-V", "TL-Verilog", "130nm Skywater PDK", "RTL to GDSII"],
+      "features": [
+        "Designed a multi-stage (1-6) pipelined RISC-V CPU Core using Transaction Level Verilog",
+        "Conducted RTL to GDSII flow with open-source tools and 130nm Skywater PDK",
+        "Achieved timing closure and DRC/LVS-free GDSII"
+      ],
+      "github": "https://github.com/shariethernet",
+      "liveDemo": ""
+    },
+    {
+      "title": "Design Verification Projects",
+      "category": "verification",
+      "description": "A collection of formal verification and UVM-based verification projects for various hardware modules.",
+      "image": "/placeholder.svg?height=200&width=400",
+      "technologies": ["Formal Verification", "UVM", "Jasper Gold", "Conformal LEC", "VC Formal", "Verdi"],
+      "features": [
+        "Formal Verification of AXI Stream and AXIS to AXI Lite bridge using Cadence Jasper Gold",
+        "Logic Equivalence Check (LEC) for the write-back stage of ARM Amber Core using Cadence Conformal",
+        "Sequential Equivalence Checking of pipelined multiplier using Synopsys VC Formal & Verdi",
+        "Assertion-based Verification of Ethernet MAC module and Wishbone interface",
+        "UVM-based verification of a 32-bit ALU from ARM Amber Core"
+      ],
+      "github": "https://github.com/shariethernet",
+      "liveDemo": ""
+    }
+  ]
+}

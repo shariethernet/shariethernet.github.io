@@ -1,0 +1,50 @@
+{
+  "name": "Shrihari Gokulachandran",
+  "title": "RTL Design Engineer",
+  "profileImage": "/placeholder.svg?height=320&width=320",
+  "bio": [
+    "My core expertise lies in machine learning hardware accelerators, domain-specific architectures (CORDIC, FFT, algorithm-specific), and advanced computer architecture.",
+    "My research is focused on workload-based power-energy optimization for efficient computing systems.",
+    "I have practical exposure to the complete RTL-to-GDS flow using commercial EDA tools, FPGA emulation, and post-silicon validation, demonstrated through my Compute-Near-Memory test-chip taped out at TSMC-65nm.",
+    "I actively contribute to emerging high-level HDLs such as TL-Verilog. Recently, I have begun experimenting with agentic interfaces (MCP + EDA tools) aimed at automating RTL generation, verification, and chip design workflows.",
+    "I leverage high-agency and first-principles thinking to tackle any challenge—even outside my expertise—and consistently deliver quality, high-impact solutions."
+  ],
+  "skillCategories": [
+    {
+      "category": "Programming",
+      "skills": ["Python", "C", "bash", "RISC-V Assembly", "TCL"]
+    },
+    {
+      "category": "HDL/HVL",
+      "skills": ["Verilog", "System Verilog", "Bluespec System Verilog", "TL-Verilog"]
+    },
+    {
+      "category": "EDA Tools",
+      "skills": [
+        "Synopsys VCS",
+        "Cadence Xcelium",
+        "Siemens Questa",
+        "Primetime",
+        "Primepower",
+        "Design Compiler",
+        "Genus",
+        "Innovus",
+        "Tempus",
+        "Joules",
+        "MATLAB",
+        "VC Formal",
+        "Questa Formal",
+        "JasperGold",
+        "Vivado"
+      ]
+    },
+    {
+      "category": "Hardware",
+      "skills": ["FPGAs (Artix, Zynq, Zynq MPSOC, Cyclone)", "Microcontrollers (ESP8266, SiEFR32MG24, RS9116)"]
+    },
+    {
+      "category": "Version Control",
+      "skills": ["Git", "Perforce", "Methodics"]
+    }
+  ]
+}

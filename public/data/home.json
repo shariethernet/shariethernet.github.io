@@ -1,0 +1,13 @@
+{
+  "name": "Shrihari Gokulachandran",
+  "greeting": "Hello, I'm",
+  "titlePrefix": "I'm an",
+  "typingPhrases": [
+    "Digital Design Engineer",
+    "ASIC Design Engineer",
+    "Hardware Architect",
+    "ML Accelerator Architect"
+  ],
+  "summary": "I am primarily an RTL Design Engineer who can cross boundaries from micro-architecture to architectural modeling, as well as performing formal verification.",
+  "resumeUrl": "/resume.pdf"
+}
