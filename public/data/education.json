@@ -5,7 +5,7 @@
       "institution": "The University of Texas at Austin",
       "location": "Texas, USA",
       "period": "August 2022 - Present (part-time)",
-      "description": "Focusing on advanced computer architecture and hardware design for machine learning applications.",
+      "description": "Focussing on workload based power-energy optimization using FD-SOI technology.",
       "courses": [],
       "achievements": []
     },
@@ -17,11 +17,11 @@
       "description": "GPA: 3.9/4.0, Concentration: Architecture, Computer Systems, and Embedded Systems",
       "courses": [
         "Computer Architecture",
+        "Hardware Architectures for Machine Learning",
         "SoC Design",
         "ASIC Design Lab",
         "Verification of Digital Systems",
         "High Speed Computer Arithmetic",
-        "Hardware Architectures for Machine Learning",
         "Embedded IoT"
       ],
       "achievements": []
@@ -38,8 +38,7 @@
         "VLSI Design",
         "Embedded Systems",
         "Digital Signal Processing",
-        "Advanced Physical Design using 130nm PDK (VSD)",
-        "Building a RISC-V CPU (Linux Foundation)"
+        "Advanced Physical Design using 130nm PDK (VSD)"
       ],
       "achievements": ["Best Outgoing Student", "Best Bachelor Thesis"]
     }

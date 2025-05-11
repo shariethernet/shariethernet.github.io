@@ -24,7 +24,7 @@
       "image": "/placeholder.svg?height=200&width=400",
       "technologies": ["TSMC 65nm", "RTL to GDS", "Post-Silicon Testing", "FPGA Emulation"],
       "features": [
-        "Architected, designed, verified, and implemented a Compute Near Memory Test Chip",
+        "Architected, designed, verified, and implemented a Compute Near Memory Test Chip on TSMC 65nm node",
         "Targeted convolutions, arithmetic, and logical operations",
         "Developed FPGA-based emulation platform",
         "Created post-silicon test infrastructure",
@@ -38,7 +38,7 @@
       "category": "hardware",
       "description": "A Framework for Low Latency Binary Neural Network Inference on FPGAs, extending Xilinx Research's LogicNets.",
       "image": "/placeholder.svg?height=200&width=400",
-      "technologies": ["FPGA", "Binary Neural Networks", "Hardware Acceleration", "Xilinx"],
+      "technologies": ["FPGA", "Binary Neural Networks", "Hardware Acceleration", "Pytorch", "System Verilog"],
       "features": [
         "Exploited neuron-to-truth-table equivalence for fully connected and convolutional layers",
         "Achieved 90% accuracy and <20ns inference latency at 200 MHz",
@@ -48,11 +48,11 @@
       "liveDemo": ""
     },
     {
-      "title": "Hardware Accelerator Extension Interface",
+      "title": "Hardware Accelerator Extension Interface for RISC-V CPUs",
       "category": "hardware",
       "description": "Co-processor agnostic accelerator adapter for RISC-V CPUs based on OpenHW Group's Core-V Extension Interface Specifications.",
       "image": "/placeholder.svg?height=200&width=400",
-      "technologies": ["RISC-V", "Hardware Acceleration", "OpenHW Group", "Core-V"],
+      "technologies": ["RISC-V", "Hardware Acceleration", "SystemVerilog", "BlueSpec SystemVerilog"],
       "features": [
         "Designed a co-processor agnostic accelerator adapter",
         "Based on OpenHW Group's Core-V Extension Interface Specifications",
@@ -68,10 +68,9 @@
       "image": "/placeholder.svg?height=200&width=400",
       "technologies": ["Xilinx FPGA", "AXI4-Lite", "AXI Stream", "Zynq", "IP Packaging"],
       "features": [
-        "Developed automation frameworks for IP Packaging (AXI4-Lite, AXI Stream)",
-        "Automated Block Design and bitstream generation",
-        "Targeted Zynq-based prototyping",
-        "Streamlined hardware accelerator development workflow"
+        "Developed and end-end flow for rapid FPGA prototyping of hardware accelerators",
+        "Automated IP packaging, block design, bitstream generation and remote FPGA configuration, and web-deployment",
+        "Write SystemVerilog code for accelerator, run RPHAX, write software using Python on the browser"
       ],
       "github": "https://github.com/shariethernet",
       "liveDemo": ""
@@ -93,7 +92,7 @@
     {
       "title": "Design Verification Projects",
       "category": "verification",
-      "description": "A collection of formal verification and UVM-based verification projects for various hardware modules.",
+      "description": "A collection of formal verification and UVM-based verification projects.",
       "image": "/placeholder.svg?height=200&width=400",
       "technologies": ["Formal Verification", "UVM", "Jasper Gold", "Conformal LEC", "VC Formal", "Verdi"],
       "features": [
