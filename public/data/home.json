@@ -1,13 +1,13 @@
 {
   "name": "Shrihari Gokulachandran",
   "greeting": "Hello, I'm",
-  "titlePrefix": "I'm an",
+  "titlePrefix": "",
   "typingPhrases": [
     "Digital Design Engineer",
     "ASIC Design Engineer",
-    "Hardware Architect",
-    "ML Accelerator Architect"
+    "ML Accelerator Architect",
+    "RTL Design Engineer"
   ],
-  "summary": "I am primarily an RTL Design Engineer who can cross boundaries from micro-architecture to architectural modeling, as well as performing formal verification.",
+  "summary": "Digital Design Engineer building AI/ML accelerator hardware, memory controllers, and low-power digital IPs — from architectural modeling and microarchitecture to RTL, verification, and silicon.",
   "resumeUrl": "/resume.pdf"
 }

@@ -4,48 +4,88 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 53%;
-    --radius: 0.5rem;
+    /* ---- Light theme (warm off-white + copper/amber) ---- */
+    --background: 40 33% 97%;
+    --foreground: 24 12% 12%;
+
+    --card: 40 33% 99%;
+    --card-foreground: 24 12% 12%;
+
+    --popover: 40 33% 99%;
+    --popover-foreground: 24 12% 12%;
+
+    --primary: 28 92% 46%;
+    --primary-foreground: 40 50% 98%;
+
+    --secondary: 36 24% 92%;
+    --secondary-foreground: 24 12% 18%;
+
+    --muted: 36 20% 92%;
+    --muted-foreground: 28 8% 42%;
+
+    --accent: 32 95% 50%;
+    --accent-foreground: 24 30% 12%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 40 50% 98%;
+
+    --border: 30 14% 86%;
+    --input: 30 14% 84%;
+    --ring: 30 92% 48%;
+
+    --radius: 0.9rem;
+
+    /* glassmorphism + decorative tokens */
+    --glass-bg: 255 255 255;
+    --glass-bg-alpha: 0.62;
+    --glass-border: 28 25 20;
+    --glass-border-alpha: 0.08;
+    --glass-highlight: 255 255 255;
+    --grid-line: 28 20% 78%;
+    --glow-1: 32 95% 55%;   /* amber  */
+    --glow-2: 14 90% 60%;   /* copper/orange */
+    --glow-3: 350 80% 62%;  /* muted rose */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217 91% 60%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 217 91% 60%;
+    /* ---- Dark theme (warm near-black + copper/amber) ---- */
+    --background: 36 14% 5%;
+    --foreground: 36 30% 95%;
+
+    --card: 34 12% 8%;
+    --card-foreground: 36 30% 95%;
+
+    --popover: 34 12% 8%;
+    --popover-foreground: 36 30% 95%;
+
+    --primary: 36 94% 54%;
+    --primary-foreground: 30 40% 8%;
+
+    --secondary: 34 10% 14%;
+    --secondary-foreground: 36 30% 95%;
+
+    --muted: 34 9% 13%;
+    --muted-foreground: 34 10% 64%;
+
+    --accent: 32 95% 55%;
+    --accent-foreground: 30 40% 8%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 36 30% 95%;
+
+    --border: 36 10% 18%;
+    --input: 36 10% 18%;
+    --ring: 36 94% 54%;
+
+    --glass-bg: 255 250 244;
+    --glass-bg-alpha: 0.045;
+    --glass-border: 255 240 220;
+    --glass-border-alpha: 0.10;
+    --glass-highlight: 255 240 220;
+    --grid-line: 36 12% 22%;
+    --glow-1: 36 95% 52%;   /* amber  */
+    --glow-2: 18 92% 52%;   /* copper  */
+    --glow-3: 348 70% 50%;  /* deep rose */
   }
 }
 
@@ -55,53 +95,190 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  ::selection {
+    background: hsl(var(--primary) / 0.28);
+    color: hsl(var(--foreground));
   }
 }
 
-html {
-  scroll-behavior: smooth;
+@layer components {
+  /* ----------------------------------------------------------------
+     Glassmorphism
+  ---------------------------------------------------------------- */
+  .glass {
+    background: rgb(var(--glass-bg) / var(--glass-bg-alpha));
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    border: 1px solid rgb(var(--glass-border) / var(--glass-border-alpha));
+    box-shadow:
+      0 1px 0 0 rgb(var(--glass-highlight) / 0.06) inset,
+      0 8px 32px -12px rgb(0 0 0 / 0.45);
+  }
+
+  .glass-strong {
+    background: rgb(var(--glass-bg) / calc(var(--glass-bg-alpha) + 0.05));
+    backdrop-filter: blur(28px) saturate(160%);
+    -webkit-backdrop-filter: blur(28px) saturate(160%);
+    border: 1px solid rgb(var(--glass-border) / calc(var(--glass-border-alpha) + 0.04));
+    box-shadow:
+      0 1px 0 0 rgb(var(--glass-highlight) / 0.08) inset,
+      0 16px 48px -16px rgb(0 0 0 / 0.55);
+  }
+
+  /* Hover-lift card built on glass */
+  .glass-card {
+    @apply glass rounded-2xl;
+    transition:
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.45s ease;
+  }
+  .glass-card:hover {
+    transform: translateY(-4px);
+    border-color: hsl(var(--primary) / 0.28);
+    box-shadow:
+      0 1px 0 0 rgb(var(--glass-highlight) / 0.08) inset,
+      0 24px 60px -22px rgb(0 0 0 / 0.55);
+  }
+
+  /* Amber gradient text */
+  .text-gradient {
+    background: linear-gradient(
+      100deg,
+      hsl(36 96% 60%),
+      hsl(24 95% 56%),
+      hsl(348 78% 60%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Mono eyebrow / kicker label */
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.25em] text-primary/90;
+  }
+
+  /* Amber gradient fill button */
+  .btn-glow {
+    background-color: hsl(var(--primary));
+    color: hsl(30 45% 10%);
+    box-shadow: 0 6px 18px -10px hsl(32 95% 50% / 0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  }
+  .btn-glow:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.04);
+    box-shadow: 0 10px 24px -10px hsl(32 95% 50% / 0.6);
+  }
+
+  /* Chip / tag */
+  .chip {
+    @apply inline-flex items-center rounded-full border px-3 py-1 text-sm transition-colors;
+    background: hsl(var(--primary) / 0.06);
+    border-color: hsl(var(--primary) / 0.18);
+    color: hsl(var(--foreground) / 0.9);
+  }
+  .chip:hover {
+    background: hsl(var(--primary) / 0.12);
+    border-color: hsl(var(--primary) / 0.4);
+  }
 }
 
-.section-transition {
-  transition: all 0.5s ease-in-out;
+@layer utilities {
+  /* Blueprint grid background (masked, fades at edges) */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--grid-line) / 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--grid-line) / 0.5) 1px, transparent 1px);
+    background-size: 70px 70px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 100%);
+  }
+
+  .animate-float {
+    animation: float 16s ease-in-out infinite;
+  }
+  .animate-float-slow {
+    animation: float 26s ease-in-out infinite;
+  }
 }
 
+/* ----------------------------------------------------------------
+   Keyframes
+---------------------------------------------------------------- */
+@keyframes float {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(4%, -6%, 0) scale(1.08); }
+  66% { transform: translate3d(-4%, 4%, 0) scale(0.96); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------------------------------------------------------
+   Custom scrollbar
+---------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.35);
+  border-radius: 99px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.55);
+  background-clip: padding-box;
+}
+
+/* ----------------------------------------------------------------
+   Timeline (used by experience / education)
+---------------------------------------------------------------- */
 .timeline-item {
   position: relative;
-  padding-left: 2rem;
-  margin-bottom: 2rem;
+  padding-left: 2.25rem;
+  padding-bottom: 2.5rem;
 }
-
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0.5rem;
-  height: 1rem;
-  width: 1rem;
+  left: 0.05rem;
+  top: 0.4rem;
+  height: 0.85rem;
+  width: 0.85rem;
   border-radius: 50%;
-  background-color: hsl(var(--primary));
+  background: hsl(var(--primary));
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.15), 0 0 16px 0 hsl(var(--primary) / 0.6);
+  z-index: 1;
 }
-
 .timeline-item::after {
   content: "";
   position: absolute;
-  left: 0.5rem;
-  top: 1.5rem;
-  bottom: -2rem;
+  left: 0.47rem;
+  top: 1.4rem;
+  bottom: -0.3rem;
   width: 1px;
-  background-color: hsl(var(--primary) / 0.5);
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--primary) / 0.5),
+    hsl(var(--primary) / 0.05)
+  );
 }
-
 .timeline-item:last-child::after {
   display: none;
-}
-
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }

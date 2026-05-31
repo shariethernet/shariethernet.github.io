@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Link as ScrollLink } from "react-scroll"
+import { AlertCircle, ChevronUp } from "lucide-react"
 import Header from "@/components/header"
 import Home from "@/components/home"
 import Profile from "@/components/profile"
@@ -10,8 +11,7 @@ import Experience from "@/components/experience"
 import Projects from "@/components/projects"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
-import { ThemeProvider } from "@/components/theme-provider"
-import { AlertCircle } from "lucide-react"
+import { Toaster } from "@/components/ui/toaster"
 import { loadJsonWithErrorHandling } from "@/utils/json-loader"
 
 export default function Portfolio() {
@@ -59,87 +59,102 @@ export default function Portfolio() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500"></div>
+      <div className="flex items-center justify-center min-h-screen bg-background">
+        <div className="relative h-16 w-16">
+          <div className="absolute inset-0 rounded-full border-2 border-primary/15" />
+          <div className="absolute inset-0 rounded-full border-t-2 border-primary animate-spin" />
+        </div>
       </div>
     )
   }
 
   if (error) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen p-4">
-        <div className="flex items-center text-red-500 mb-4">
-          <AlertCircle className="h-8 w-8 mr-2" />
-          <h2 className="text-2xl font-bold">Error Loading Data</h2>
+      <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-background">
+        <div className="glass-strong rounded-2xl p-8 max-w-2xl w-full">
+          <div className="flex items-center text-destructive mb-4">
+            <AlertCircle className="h-7 w-7 mr-2" />
+            <h2 className="text-2xl font-bold font-display">Error Loading Data</h2>
+          </div>
+          <p className="text-muted-foreground mb-4">There was a problem loading the portfolio data:</p>
+          <div className="bg-destructive/10 p-4 rounded-xl overflow-auto border border-destructive/20">
+            <pre className="text-destructive whitespace-pre-wrap text-sm">{error}</pre>
+          </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Please check your JSON data files in <code className="font-mono text-primary">public/data/</code> for syntax
+            errors and ensure they are properly formatted.
+          </p>
         </div>
-        <p className="text-center mb-4">There was a problem loading the portfolio data:</p>
-        <div className="bg-red-100 dark:bg-red-900/20 p-4 rounded-md max-w-2xl w-full overflow-auto">
-          <pre className="text-red-700 dark:text-red-300 whitespace-pre-wrap">{error}</pre>
-        </div>
-        <p className="mt-4 text-center">
-          Please check your JSON data files for syntax errors and ensure they are properly formatted.
-        </p>
       </div>
     )
   }
 
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme" enableSystem={false}>
-      <div className="min-h-screen bg-background text-foreground">
-        <Header />
-
-        <main>
-          <section id="home" className="min-h-screen">
-            <Home data={data.home} />
-          </section>
-
-          <section id="profile" className="min-h-screen py-20">
-            <Profile data={data.profile} />
-          </section>
-
-          <section id="education" className="min-h-screen py-20 bg-muted/30">
-            <Education data={data.education} />
-          </section>
-
-          <section id="experience" className="min-h-screen py-20">
-            <Experience data={data.experience} />
-          </section>
-
-          <section id="projects" className="min-h-screen py-20 bg-muted/30">
-            <Projects data={data.projects} />
-          </section>
-
-          <section id="contact" className="min-h-screen py-20">
-            <Contact data={data.contact} />
-          </section>
-        </main>
-
-        <Footer resumeUrl={data.home?.resumeUrl || "/resume.pdf"} />
-
-        <div className="fixed bottom-10 right-10">
-          <ScrollLink
-            to="home"
-            smooth={true}
-            duration={500}
-            className="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors cursor-pointer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-chevron-up"
-            >
-              <path d="m18 15-6-6-6 6" />
-            </svg>
-          </ScrollLink>
-        </div>
+    <div className="relative min-h-screen bg-background text-foreground overflow-x-clip">
+      {/* ---- Decorative background layers ---- */}
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        {/* blueprint grid */}
+        <div className="absolute inset-0 bg-grid opacity-[0.35]" />
+        {/* aurora glows */}
+        <div
+          className="absolute -top-40 -left-32 h-[36rem] w-[36rem] rounded-full blur-[130px] opacity-[0.28] animate-float"
+          style={{ background: "radial-gradient(circle, hsl(var(--glow-1) / 0.5), transparent 65%)" }}
+        />
+        <div
+          className="absolute top-1/3 -right-40 h-[34rem] w-[34rem] rounded-full blur-[130px] opacity-[0.2] animate-float-slow"
+          style={{ background: "radial-gradient(circle, hsl(var(--glow-2) / 0.45), transparent 65%)" }}
+        />
+        {/* vignette to keep edges grounded */}
+        <div
+          className="absolute inset-0"
+          style={{ background: "radial-gradient(ellipse 90% 70% at 50% 0%, transparent 40%, hsl(var(--background)) 100%)" }}
+        />
       </div>
-    </ThemeProvider>
+
+      <Header />
+
+      <main>
+        <section id="home" className="relative">
+          <Home data={data.home} />
+        </section>
+
+        <section id="profile" className="py-24 md:py-32">
+          <Profile data={data.profile} />
+        </section>
+
+        <section id="education" className="py-24 md:py-32">
+          <Education data={data.education} />
+        </section>
+
+        <section id="experience" className="py-24 md:py-32">
+          <Experience data={data.experience} />
+        </section>
+
+        <section id="projects" className="py-24 md:py-32">
+          <Projects data={data.projects} />
+        </section>
+
+        <section id="contact" className="py-24 md:py-32">
+          <Contact data={data.contact} />
+        </section>
+      </main>
+
+      <Footer resumeUrl={data.home?.resumeUrl || "/resume.pdf"} />
+
+      {/* Scroll to top */}
+      <div className="fixed bottom-8 right-8 z-40">
+        <ScrollLink
+          to="home"
+          smooth={true}
+          duration={500}
+          className="glass flex items-center justify-center w-12 h-12 rounded-full text-primary hover:text-primary hover:border-primary/50 transition-colors cursor-pointer shadow-lg"
+          aria-label="Scroll to top"
+        >
+          <ChevronUp className="h-5 w-5" />
+        </ScrollLink>
+      </div>
+
+      <Toaster />
+    </div>
   )
 }

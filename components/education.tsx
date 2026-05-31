@@ -1,26 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Calendar, MapPin } from "lucide-react"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Calendar, MapPin, GraduationCap, Award } from "lucide-react"
+import SectionHeading from "./section-heading"
 
 export default function Education({ data }) {
   if (!data) return null
 
   return (
-    <div className="container mx-auto px-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Education</h2>
-        <div className="h-1 w-20 bg-primary mx-auto"></div>
-      </motion.div>
+    <div className="container mx-auto max-w-3xl px-4">
+      <SectionHeading eyebrow="// 02 — Academic record" title="Education" />
 
-      <div className="max-w-3xl mx-auto">
+      <div className="relative">
         {data.education.map((edu, index) => (
           <motion.div
             key={index}
@@ -28,55 +19,63 @@ export default function Education({ data }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="mb-8"
+            className="timeline-item"
           >
-            <Card className="overflow-hidden border-l-4 border-l-primary">
-              <CardHeader className="bg-muted/30 pb-3">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
-                  <h3 className="text-xl font-bold">{edu.degree}</h3>
-                  <div className="flex items-center text-sm text-primary font-medium">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    {edu.period}
-                  </div>
-                </div>
-                <div className="flex items-center text-muted-foreground">
-                  <h4 className="font-medium">{edu.institution}</h4>
-                  {edu.location && (
-                    <div className="flex items-center ml-4">
-                      <MapPin className="h-4 w-4 mr-1" />
-                      {edu.location}
-                    </div>
-                  )}
-                </div>
-              </CardHeader>
-              <CardContent className="pt-4">
-                {edu.description && <p className="text-muted-foreground mb-3">{edu.description}</p>}
-
-                {edu.courses && edu.courses.length > 0 && (
+            <div className="glass-card rounded-2xl p-6">
+              <div className="mb-3 flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+                <div className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <GraduationCap className="h-5 w-5" />
+                  </span>
                   <div>
-                    <h5 className="font-semibold mb-2">Relevant Coursework:</h5>
-                    <div className="flex flex-wrap gap-2">
-                      {edu.courses.map((course, idx) => (
-                        <span key={idx} className="bg-muted px-3 py-1 rounded-full text-sm">
-                          {course}
-                        </span>
-                      ))}
-                    </div>
+                    <h3 className="font-display text-lg font-bold leading-snug">{edu.degree}</h3>
+                    <h4 className="font-medium text-primary">{edu.institution}</h4>
                   </div>
-                )}
+                </div>
+                <div className="flex shrink-0 items-center gap-1.5 rounded-full bg-secondary/60 px-3 py-1 font-mono text-xs text-muted-foreground">
+                  <Calendar className="h-3.5 w-3.5" />
+                  {edu.period}
+                </div>
+              </div>
 
-                {edu.achievements && edu.achievements.length > 0 && (
-                  <div className="mt-3">
-                    <h5 className="font-semibold mb-2">Achievements:</h5>
-                    <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                      {edu.achievements.map((achievement, idx) => (
-                        <li key={idx}>{achievement}</li>
-                      ))}
-                    </ul>
+              {edu.location && (
+                <div className="mb-3 flex items-center gap-1.5 text-sm text-muted-foreground">
+                  <MapPin className="h-3.5 w-3.5" />
+                  {edu.location}
+                </div>
+              )}
+
+              {edu.description && <p className="mb-4 text-sm text-muted-foreground">{edu.description}</p>}
+
+              {edu.courses && edu.courses.length > 0 && (
+                <div className="mb-4">
+                  <h5 className="mb-2 font-mono text-xs uppercase tracking-wider text-foreground/70">
+                    Relevant Coursework
+                  </h5>
+                  <div className="flex flex-wrap gap-2">
+                    {edu.courses.map((course, idx) => (
+                      <span key={idx} className="chip text-xs">
+                        {course}
+                      </span>
+                    ))}
                   </div>
-                )}
-              </CardContent>
-            </Card>
+                </div>
+              )}
+
+              {edu.achievements && edu.achievements.length > 0 && (
+                <div>
+                  <h5 className="mb-2 font-mono text-xs uppercase tracking-wider text-foreground/70">Achievements</h5>
+                  <ul className="space-y-1.5">
+                    {edu.achievements.map((achievement, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Award className="h-4 w-4 shrink-0 text-primary" />
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </motion.div>
         ))}
       </div>

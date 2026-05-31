@@ -1,46 +1,47 @@
 {
   "education": [
     {
-      "degree": "PhD - Electrical and Computer Engineering",
+      "degree": "Ph.D. — Architecture, Computer Systems, and Embedded Systems (ACSES)",
       "institution": "The University of Texas at Austin",
       "location": "Texas, USA",
-      "period": "August 2022 - Present (part-time)",
-      "description": "Focussing on workload based power-energy optimization using FD-SOI technology.",
+      "period": "August 2022 – Present",
+      "description": "GPA: 3.9/4.0. Research: workload-aware power/energy optimization for FD-SOI-based heterogeneous edge computing platforms.",
       "courses": [],
       "achievements": []
     },
     {
-      "degree": "MS - Electrical and Computer Engineering",
+      "degree": "M.S. — Electrical and Computer Engineering",
       "institution": "The University of Texas at Austin",
       "location": "Texas, USA",
-      "period": "August 2022 - May 2024",
-      "description": "GPA: 3.9/4.0, Concentration: Architecture, Computer Systems, and Embedded Systems",
+      "period": "August 2022 – May 2024",
+      "description": "GPA: 3.9/4.0",
       "courses": [
         "Computer Architecture",
-        "Hardware Architectures for Machine Learning",
         "SoC Design",
-        "ASIC Design Lab",
+        "ASIC Design",
         "Verification of Digital Systems",
         "High Speed Computer Arithmetic",
+        "Hardware Architectures for Machine Learning",
         "Embedded IoT"
       ],
       "achievements": []
     },
     {
-      "degree": "B.E. - Electronics and Communication Engineering",
+      "degree": "B.E. — Electronics and Communication Engineering",
       "institution": "PSG College of Technology",
       "location": "Coimbatore, India",
-      "period": "August 2018 - May 2022",
-      "description": "GPA: 9.92/10, Summa Cum Laude, Class of 2022",
+      "period": "August 2018 – May 2022",
+      "description": "GPA: 9.92/10",
       "courses": [
-        "Computer Organization",
+        "Computer Architecture",
         "Digital Design",
         "VLSI Design",
         "Embedded Systems",
         "Digital Signal Processing",
-        "Advanced Physical Design using 130nm PDK (VSD)"
+        "Advanced Physical Design using 130nm PDK (VSD)",
+        "Building a RISC-V CPU (Linux Foundation)"
       ],
-      "achievements": ["Best Outgoing Student", "Best Bachelor Thesis"]
+      "achievements": ["Summa Cum Laude — Class of 2022", "Best Outgoing Student", "Best Bachelor Thesis Award"]
     }
   ]
 }

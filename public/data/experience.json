@@ -1,109 +1,90 @@
 {
   "experience": [
     {
-      "position": "Graduate Research Assistant",
-      "company": "SLAM Lab - University of Texas at Austin",
-      "location": "Austin, TX",
-      "period": "January 2023 - May 2024",
-      "description": "Research focused on workload-based power-energy optimization using FD-SOI technology.",
-      "responsibilities": [
-        "Developed workload-based design-time strategies for heterogeneous platforms on GlobalFoundries 22nm-FDSOI Technology",
-        "Implemented reactive and proactive run-time power management algorithms",
-        "Conducted performance and power analysis for various computing workloads"
-      ],
-      "technologies": ["SystemVerilog", "Python", "PTPX", "Fusion-Compiler", "Design-Compiler"]
-    },
-    {
-      "position": "RTL Design Engineer - Intern",
+      "position": "Digital Design Engineer",
       "company": "Silicon Labs",
       "location": "Austin, TX",
-      "period": "May 2023 - August 2023",
-      "description": "Worked on the architecture and micro-architecture of low-power machine learning inference accelerator.",
+      "period": "July 2024 – Present",
+      "description": "",
       "responsibilities": [
-        "Developed an approximately timed model of a Low Power Machine Learning Inference Accelerator",
-        "Profiled architectural variations and third-party IPs across TensorFlow Lite-Micro based ML workloads",
-        "Architected novel features and algorithms for edge cases in Convolutional layers",
-        "Contributed to micro-architecture definition",
-        "Developed RTL for the Convolution engine, optimized for power and area",
-        "Verified with System Verilog Testbench and performed initial synthesis"
+        "Sole architect and RTL designer for an early-stage edge ML inference accelerator IP, from workload profiling and NPU benchmarking to microarchitecture definition and RTL implementation.",
+        "Defined a memory-aware accelerator architecture to maximize MAC utilization, reduce memory bandwidth, and improve throughput/latency across edge ML workloads.",
+        "Architected and implemented features including on-the-fly convolution lowering, optimized buffering/tiling, back-to-back convolution dataflow, and affine re-quantization, achieving ~3× higher average MAC utilization versus evaluated commercial NPU baselines.",
+        "Designed memory controller IP and owned AHB/AXI/APB-based register interface and bus-level security generators for chip infrastructure, including init, synthesis, LEC, and trace-based power analysis.",
+        "Received Silicon Labs' AI award (Q2-2025) and Technical Symposium 2025 recognition for novel architectural contributions in ML acceleration and development of internal agentic frameworks."
       ],
-      "technologies": ["SystemVerilog", "Architectural Modeling-C++,Python", "TensorFlow Lite-Micro", "ML Accelerators", "Low Power Design"]
+      "technologies": ["SystemVerilog", "ML Accelerators", "Memory Controller", "AHB/AXI/APB", "Low-Power Design"]
+    },
+    {
+      "position": "Graduate Research Assistant",
+      "company": "SLAM Lab — University of Texas at Austin",
+      "location": "Austin, TX",
+      "period": "Jan – May 2023, Sep 2023 – May 2024",
+      "description": "",
+      "responsibilities": [
+        "Developed workload-based power-management strategies (design-time, run-time DVFS vs DVBFS) for heterogeneous platforms (RISC-V-based SoCs) on GlobalFoundries 22nm-FDSOI technology."
+      ],
+      "technologies": ["RISC-V SoC", "GF 22nm-FDSOI", "Power Management", "SystemVerilog", "Python"]
+    },
+    {
+      "position": "RTL Design Engineer — Intern",
+      "company": "Silicon Labs",
+      "location": "Austin, TX",
+      "period": "May 2023 – August 2023",
+      "description": "",
+      "responsibilities": [
+        "Developed an approximately timed architectural model of a low-power ML inference accelerator and profiled architectural variations and third-party accelerator baselines across MLPerf Tiny workloads.",
+        "Contributed to early accelerator definition through workload-driven architectural studies, feature exploration, and initial microarchitecture development."
+      ],
+      "technologies": ["Architectural Modeling (C++)", "ML Accelerators", "MLPerf Tiny", "SystemVerilog"]
     },
     {
       "position": "Teaching Assistant",
       "company": "The University of Texas at Austin",
       "location": "Austin, TX",
-      "period": "September 2022 - December 2022",
-      "description": "Course: ECE 306 Introduction to Computing",
+      "period": "September 2022 – December 2022",
+      "description": "",
       "responsibilities": [
-        "Led problem-solving sessions, developed grading scripts, graded labs and assignments."
+        "Teaching assistant for ECE 306 (Introduction to Computing) — led problem-solving sessions, developed grading scripts, and graded labs and assignments."
       ],
-      "technologies": []
+      "technologies": ["C", "Python"]
     },
     {
-      "position": "Open-Source Developer",
-      "company": "Google Summer of Code",
-      "location": "Remote",
-      "period": "May 2022 - August 2022",
-      "description": "Developed \"1st CLaaS for PYNQ FPGAs\" and \"Makerchip Flows\".",
-      "responsibilities": [
-        "Developed \"1st CLaaS for PYNQ FPGAs,\" an automated hardware accelerator integration framework with remote FPGA capabilities",
-        "Integrated the framework into Makerchip.com",
-        "Developed \"Makerchip Flows,\" an Edalize-Fusesoc based framework for TL-Verilog-centric ASIC/FPGA/Verification flows"
-      ],
-      "technologies": ["TL-Verilog", "SystemVerilog","Xilinx Zynq FPGA(PYNQ-Z2)", "Vivado", "Python"]
-    },
-    {
-      "position": "Design Verification Engineer - Intern",
+      "position": "Design Verification Engineer — Intern",
       "company": "Silicon Labs",
       "location": "India",
-      "period": "January 2022 - July 2022",
-      "description": "Worked on UVM-based and Formal Verification of IPs and developedgolden reference models for security subsystems.",
+      "period": "January 2022 – July 2022",
+      "description": "",
       "responsibilities": [
-        "Developed frameworks for migration and integration of legacy projects in Silicon Labs Design Environment",
-        "Developed and integrated Golden Reference Models for QSPI AES modules in Security Sub-Systems, and identified critical design bugs",
-        "Worked on internal VCs for ARM Low Power Interface, Silicon Labs Peripheral Reflex System, AXI, SPI",
-        "Contributed to formal verification bring-up",
-        "Automated GPIO De-mux testbench generation for rapid testing across varied configurations, saving manual development and debuging time"
+        "Developed golden-reference C models for AES modes used in QSPI interfaces and integrated them into a UVM-based testbench, identifying critical IP-level and security-subsystem-level bugs.",
+        "Developed frameworks for migration and integration of legacy projects in the Silicon Labs design environment.",
+        "Worked on verification components for ARM Low Power Interface, Silicon Labs Peripheral Reflex System, AXI, and SPI, and on formal verification bring-up for upcoming projects."
       ],
-      "technologies": ["SystemVerilog", "UVM","Formal Verification","Python","AXI", "SPI", "ARM Low Power Interface", "AES"]
-    },
-    {
-      "position": "RTL Design Engineer - Intern",
-      "company": "InCore Semiconductors",
-      "location": "India",
-      "period": "July 2021 - January 2022",
-      "description": "Built RISC-V co-processor interconnect fabric from scratch and worked on SoC generation frameworks.",
-      "responsibilities": [
-        "Architected and developed custom Co-processor interconnects for RISC-V Processors",
-        "Updated SoC generation frameworks with interconnect generation support"
-      ],
-      "technologies": ["RISC-V", "BlueSpec SystemVerilog", "Architecture", "Interconnects"]
+      "technologies": ["UVM", "SystemVerilog", "Formal Verification", "AES", "QSPI", "AXI", "SPI", "ARM Low Power Interface"]
     },
     {
       "position": "Teaching Assistant",
       "company": "VLSI System Design",
       "location": "India",
       "period": "November 2021, June 2022",
-      "description": "Assisted in FPGA design and architecture courses.",
+      "description": "",
       "responsibilities": [
-        "Developed Remote FPGA Lab Infrastructure",
-        "Assisted in the course \"FPGA - Fabric, Design and Architecture\"",
-        "Developed custom FPGA fabrics using VTR",
-        "Prototyped RISC-V Cores on Xilinx FPGAs and custom FPGA fabrics"
+        "Developed remote FPGA lab infrastructure and assisted in the course \"FPGA — Fabric, Design and Architecture.\"",
+        "Built custom FPGA fabrics using VTR and prototyped RISC-V cores on Xilinx FPGAs and custom fabrics."
       ],
-      "technologies": ["FPGA", "RISC-V", "SystemVerilog", "VTR", "Remote Lab Infrastructure"]
+      "technologies": ["FPGA", "RISC-V", "SystemVerilog", "Remote Lab Infrastructure"]
     },
     {
-      "position": "Founder",
-      "company": "Technowiz",
+      "position": "CPU Design Engineer — Intern",
+      "company": "InCore Semiconductors",
       "location": "India",
-      "period": "September 2018 - December 2023",
-      "description": "Founded an educational initiative focused on technology education.",
+      "period": "July 2021 – December 2021",
+      "description": "",
       "responsibilities": [
-        "Collaborated with high schools to offer workshops on Robotics, DIY Electronics, and Programming"
+        "Architected and developed custom co-processor interconnects for RISC-V processors.",
+        "Updated SoC-generation frameworks with interconnect generation support."
       ],
-      "technologies": ["Robotics", "DIY Electronics", "Programming", "Education"]
+      "technologies": ["RISC-V", "BlueSpec SystemVerilog", "Interconnects", "SoC Generation"]
     }
   ]
 }

@@ -1,50 +1,41 @@
 {
   "name": "Shrihari Gokulachandran",
-  "title": "RTL Design Engineer",
+  "title": "Digital Design Engineer",
   "profileImage": "/me.jpg?height=320&width=320",
   "bio": [
-    "My core expertise lies in machine learning hardware accelerators, domain-specific architectures and low-power design.",
-    "My research is focused on workload-based power-energy optimization for efficient computing systems.",
-    "I have practical exposure to the complete RTL-to-GDS flow using commercial EDA tools, FPGA emulation, and post-silicon validation, demonstrated through my Compute-Near-Memory test-chip taped out at TSMC-65nm.",
-    "I actively contribute to emerging high-level HDLs such as TL-Verilog. Recently, I have begun experimenting with agentic interfaces (MCP + EDA tools) aimed at automating RTL generation, verification, and chip design workflows.",
-    "I leverage high-agency and first-principles thinking to tackle any challenge—even outside my expertise—and consistently deliver quality, high-impact solutions."
+    "I'm a Digital Design Engineer with experience designing AI/ML accelerator hardware, memory controllers, and low-power digital IPs.",
+    "At Silicon Labs, I serve as the sole architect and RTL designer for an early-stage edge ML inference accelerator IP — owning the full path from workload profiling and NPU benchmarking to microarchitecture definition and RTL implementation, including SystemVerilog RTL design, architectural modeling, workload-driven design exploration, and hardware/software co-design.",
+    "My research focuses on workload-driven power management and synthesis optimization for heterogeneous systems; related work on dynamic voltage, body-bias, and frequency scaling for FD-SOI low-power edge processors appears at DATE 2026.",
+    "I also have end-to-end RTL-to-GDS experience and post-silicon bring-up of a TSMC 65nm compute-near-memory MPW test chip, and I build agentic interfaces between LLMs and EDA tools to automate RTL design, verification, and debug."
   ],
   "skillCategories": [
     {
-      "category": "Programming",
-      "skills": ["Python", "C", "bash", "RISC-V Assembly", "TCL"]
+      "category": "RTL Design",
+      "skills": ["SystemVerilog", "Verilog", "TL-Verilog"]
     },
     {
-      "category": "HDL/HVL",
-      "skills": ["Verilog", "System Verilog", "Bluespec System Verilog", "TL-Verilog"]
+      "category": "Programming",
+      "skills": ["Python", "C", "Bash", "TCL"]
     },
     {
       "category": "EDA Tools",
       "skills": [
         "Synopsys VCS",
-        "Cadence Xcelium",
-        "Siemens Questa",
-        "Primetime",
-        "Primepower",
+        "Verdi",
+        "PrimeTime / PrimePower (PTPX)",
         "Design Compiler",
+        "Cadence Xcelium",
+        "Verisium",
         "Genus",
         "Innovus",
-        "Tempus",
-        "Joules",
-        "MATLAB",
-        "VC Formal",
-        "Questa Formal",
         "JasperGold",
-        "Vivado"
+        "Conformal LEC",
+        "Siemens QuestaSim",
+        "Questa Formal / Lint / CDC",
+        "RDC",
+        "Vivado",
+        "MATLAB"
       ]
-    },
-    {
-      "category": "Hardware",
-      "skills": ["FPGAs (Artix, Zynq, Zynq MPSOC, Cyclone)", "Microcontrollers (ESP8266, SiEFR32MG24, RS9116)"]
-    },
-    {
-      "category": "Version Control",
-      "skills": ["Git", "Perforce", "Methodics"]
     }
   ]
 }
