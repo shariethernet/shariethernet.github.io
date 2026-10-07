@@ -1,10 +1,19 @@
 {
   "experience": [
     {
+      "position": "TPU RTL Design Engineer",
+      "company": "Google",
+      "location": "Sunnyvale, CA",
+      "period": "October 2026 – Present",
+      "description": "",
+      "responsibilities": [],
+      "technologies": []
+    },
+    {
       "position": "Digital Design Engineer",
       "company": "Silicon Labs",
       "location": "Austin, TX",
-      "period": "July 2024 – Present",
+      "period": "July 2024 – October 2026",
       "description": "",
       "responsibilities": [
         "Sole architect and RTL designer for an early-stage edge ML inference accelerator IP, from workload profiling and NPU benchmarking to microarchitecture definition and RTL implementation.",
